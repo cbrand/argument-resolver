@@ -18,10 +18,14 @@ type ConversionResolver struct {
 	childResolver Resolver
 }
 
+// Get returns and underlying element with and returns whether the element exists. If no extraction could be
+// done the second bool variable will be "false"
 func (resolver *ConversionResolver) Get(name string) (interface{}, bool) {
 	return resolver.childResolver.Get(name)
 }
 
+// String returns a string if the underlying data could be inferred as such. If no extraction could be done
+// the second bool variable will be "false"
 func (resolver *ConversionResolver) String(name string) (string, bool) {
 	unresolvedData, ok := resolver.Get(name)
 	if !ok {
@@ -31,6 +35,8 @@ func (resolver *ConversionResolver) String(name string) (string, bool) {
 	return conversion.ToString(unresolvedData)
 }
 
+// Int returns an int if the underlying data could be inferred as such. If no extraction could be done
+// the second bool variable will be "false"
 func (resolver *ConversionResolver) Int(name string) (int, bool) {
 	unresolvedData, ok := resolver.Get(name)
 	if !ok {
@@ -41,6 +47,8 @@ func (resolver *ConversionResolver) Int(name string) (int, bool) {
 }
 
 
+// Float returns a float object if the underlying data could be inferred as such. If no extraction could be done
+// the second bool variable will be "false"
 func (resolver *ConversionResolver) Float(name string) (float64, bool) {
 	unresolvedData, ok := resolver.Get(name)
 	if !ok {
@@ -50,6 +58,8 @@ func (resolver *ConversionResolver) Float(name string) (float64, bool) {
 	return conversion.ToFloat(unresolvedData)
 }
 
+// Bool returns a boolean if the underlying data could be inferred as such. If no extraction could be done
+// the second bool variable will be "false"
 func (resolver *ConversionResolver) Bool(name string) (bool, bool) {
 	unresolvedData, ok := resolver.Get(name)
 	if !ok {
