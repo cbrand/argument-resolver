@@ -1,5 +1,7 @@
 # Argument Resolver #
 
+[![GoDoc](https://godoc.org/github.com/cbrand/argument-resolver?status.svg)](https://godoc.org/github.com/cbrand/argument-resolver)
+
 Small Go helper library to convert maps without a specified type (e.g. `map[string]interface{}` to ints, string, 
 float64 or bool entries.) The primary use case for the creation of this mini library was to parse Arguments from the
 [graphql-go/graphql](https://github.com/graphql-go/graphqly) library.
