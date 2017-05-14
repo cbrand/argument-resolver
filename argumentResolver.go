@@ -1,4 +1,4 @@
-package argument_resolver
+package resolver
 
 // NewArgumentResolver returns a resolver which does not try to do any type conversions before returning the
 // object.

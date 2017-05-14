@@ -1,4 +1,4 @@
-package argument_resolver
+package resolver
 
 import (
 	"testing"

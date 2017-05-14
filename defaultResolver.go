@@ -1,4 +1,4 @@
-package argument_resolver
+package resolver
 
 // NewDefaultResolver wraps a resolver object and adds the necessary functions to create a fitting
 // object which implements the DefaultResolver interface.

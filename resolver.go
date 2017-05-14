@@ -1,4 +1,4 @@
-package argument_resolver
+package resolver
 
 
 // Resolver defines the interface to request information from an underlying map interface.

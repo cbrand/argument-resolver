@@ -1,4 +1,4 @@
-package argument_resolver
+package resolver
 
 import "github.com/cbrand/argument-resolver/conversion"
 
